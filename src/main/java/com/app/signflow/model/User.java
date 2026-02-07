@@ -1,31 +1,12 @@
 package com.app.signflow.model;
 
-import jakarta.persistence.*;
-
-
-@Entity
-@Table(name = "users")
 public class User {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    
-    @Column(name = "ID")
-    private Long id;
-
-    @Column(name = "FIRST_NAME")
-    private String firstName;
-    
-    @Column(name = "LAST_NAME")
-    private String lastName;
-    
-    @Column(name = "EMAIL", unique = true)
-    private String email;
-    
-    @Column(name = "PASSWORD")
-    private String password;
-    
-    @Column(name = "MOBILE_NUMBER")
-    private String mobileNumber;
+	private Long id;
+	private String firstName;
+	private String lastName;
+	private String email;
+	private String password;
+	private String mobileNumber;
 
 	public Long getId() {
 		return id;
@@ -80,6 +61,4 @@ public class User {
 		return "User [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
 				+ ", password=" + password + ", mobileNumber=" + mobileNumber + "]";
 	}
-
-    
 }
